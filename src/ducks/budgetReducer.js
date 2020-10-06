@@ -18,7 +18,7 @@ export const requestBudgetData =()=>{
     }
 }
 export const removePurchase = (id) => {
-    let data = axios.delete (`api/budget-data/purchase/${id}`.then (res=>res.data));
+    let data = axios.delete (`/api/budget-data/purchase/${id}`).then (res=>res.data);
     return{
         type: REMOVE_PURCHASE,
         payload: data
